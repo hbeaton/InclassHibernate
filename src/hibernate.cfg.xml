@@ -9,8 +9,8 @@
 
         <!-- Database connection settings -->
         <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-        <property name="hibernate.connection.url">jdbc:mysql://127.0.0.1:3306/webproducts</property>
-        <property name="hibernate.connection.username">java</property>
+        <property name="hibernate.connection.url">jdbc:mysql://127.0.0.1:3306/products</property>
+        <property name="hibernate.connection.username">jdbc</property>
         <property name="hibernate.connection.password">java123</property>
 
         <!-- SQL dialect -->

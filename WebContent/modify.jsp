@@ -6,21 +6,19 @@
 <%@ page import="com.guenther.hibexample.Product"%>  
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql"%>
- 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Hibernate Example</title>
+<title>Insert title here</title>
 </head>
 <body>
-<h1>Hibernate Example: Product Listing</h1>
-<jsp:useBean id="obj" class="com.guenther.hibexample.Product">  
-</jsp:useBean>  
-<jsp:setProperty property="*" name="obj"/>
+<h1>Hibernate Example: Category Listing</h1>
+
 <table>
 <%  
-List<Product> products = DAO.getAllProducts(); 
+String cat = request.getParameter("category");
+List<Product> products = DAO.getProductsByCategory(cat); 
 
 for (Product p: products) {
 	out.println ("<tr><td>" + p.getId() + "</td><td>" +

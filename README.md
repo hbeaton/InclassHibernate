@@ -1,1 +1,2 @@
 Hibernate1
+# InclassHibernate
